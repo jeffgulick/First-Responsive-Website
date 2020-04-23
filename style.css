@@ -1,0 +1,82 @@
+header {
+    grid-area: header;
+    font-size: 2em;
+    background-color: rgb(43,205,192);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 900px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "one . ."
+    ". two . "
+    ". . three ";
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.one {
+    grid-area: one;
+    grid-row: 2/3;
+}
+
+.two {
+    grid-area: two;
+    grid-row: 2/3;
+}
+
+.three {
+    grid-area: three;
+    grid-row: 2/3;
+}
+
+.bar_one {
+    background-color: rgb(51,168,221);
+    color: rgb(51,168,221);
+    /* grid-area: b_one; */
+}
+
+.bar_one, .bar_two, .bar_three {
+    margin-top: 20pt;
+    margin-left: 37pt;
+    margin-right: 37pt;
+    height: 25pt;
+}
+
+article {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    text-align: center;
+}
+
+
+.bar_two {
+    background-color: rgb(244,103,49);
+    color: rgb(244,103,49);
+    /* grid-area: b_two; */
+}
+
+
+.bar_three {
+    background-color: rgb(43,205,192);
+    color: rgb(43,205,192);
+    /* grid-area: b_three; */
+}
