@@ -5,11 +5,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+span {
+    font-weight: bold;
 }
 
 body {
-    height: 900px;
-    width: 900px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 775px;
+    width: 850px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -26,6 +38,7 @@ h2 {
 
 p {
     text-align: center;
+    font-size: 1em;
 }
 
 .one {
@@ -51,6 +64,7 @@ p {
 
 .bar_one, .bar_two, .bar_three {
     margin-top: 20pt;
+    margin-bottom: 7pt;
     margin-left: 37pt;
     margin-right: 37pt;
     height: 25pt;
@@ -63,8 +77,24 @@ article {
     flex-direction: column;
 }
 
+.one {
+    padding-left: 20pt;
+}
+
+.two {
+    padding-left: 20pt;
+    padding-right: 20pt;
+}
+
+.three {
+    padding-right: 20pt;
+}
+
 p {
     text-align: center;
+    margin-left: 30pt;
+    margin-right: 30pt;
+    font-size: 1em;
 }
 
 
@@ -79,4 +109,58 @@ p {
     background-color: rgb(43,205,192);
     color: rgb(43,205,192);
     /* grid-area: b_three; */
+}
+
+.title_one, .title_two, .title_three {
+    font-size: 2em;
+    margin-top: 0em;
+    margin-bottom:0em;
+    font-weight: lighter;
+}
+
+@media (max-width: 576px) {
+    body {
+        height: auto;
+        width: auto;
+        margin-left: 50pt;
+        margin-right: 50pt;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "one"
+        "two"
+        "three";
+    }
+
+    .one {
+        grid-row: 2/3;
+        padding-right: 20pt;
+    }
+
+    .two {
+        grid-row: 3/4;
+        padding-right: 20pt;
+    }
+
+    .three {
+        grid-row: 4/5;
+        padding-left: 20pt;
+        padding-right: 20pt;
+    }
+
+    .one, .two, .three {
+        background-color: #F7F5F6;
+        color: black;
+    }
+
+    .bar_one, .bar_two, .bar_three {
+        margin-left: 50pt;
+        margin-right: 50pt;
+
+    }
+
 }
