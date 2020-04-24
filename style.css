@@ -1,3 +1,4 @@
+/* styles */
 header {
     grid-area: header;
     font-size: 2em;
@@ -12,10 +13,12 @@ h1 {
     font-weight: lighter;
 }
 
+/* bold in title */
 span {
     font-weight: bold;
 }
 
+/* layout for body */
 body {
     margin: 0 auto;
     margin-top: 50px;
@@ -59,7 +62,6 @@ p {
 .bar_one {
     background-color: rgb(51,168,221);
     color: rgb(51,168,221);
-    /* grid-area: b_one; */
 }
 
 .bar_one, .bar_two, .bar_three {
@@ -118,6 +120,7 @@ p {
     font-weight: lighter;
 }
 
+/* styles for smaller screens */
 @media (max-width: 576px) {
     body {
         height: auto;
@@ -126,7 +129,6 @@ p {
         margin-right: 50pt;
         margin-top: 50px;
         margin-bottom: 50px;
-    
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
